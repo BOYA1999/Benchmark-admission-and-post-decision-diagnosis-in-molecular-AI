@@ -1,12 +1,11 @@
 # Third-party notices
 
-The root MIT License applies to repository-authored code and documentation. It does not replace the terms of upstream datasets, software, pretrained models, or data-derived outputs.
+This archive contains first-party analysis code, aggregate derived evidence and integer-index matching records. It does not redistribute upstream raw benchmark archives, molecular-structure tables, individual activities or predictions. In the table below, "Not redistributed" refers to the upstream datasets and software, not to the attributed derived summaries.
 
-Source identities, pinned revisions, redistribution boundaries, and applicable data licences are recorded in:
+| Resource | Pinned identifier | Distribution |
+|---|---|---|
+| MoleculeACE | commit `7e6de0bd2968c56589c580f2a397f01c531ede26` | Not redistributed |
+| ReactionT5v2 / USPTO_MIT | commit `76eb08068e10fe255cae5d563a91e1c1e9abac54` and file hashes in the RSO contract | Not redistributed |
+| MXC / molucn | Figshare v3 doi:10.6084/m9.figshare.21215477.v3 plus archive identifiers in the MXC contract | Not redistributed |
 
-- `audit_cases/THIRD_PARTY_NOTICES.md`
-- `molxai_crc/THIRD_PARTY_NOTICES.md`
-- `molxai_crc/DATA_SOURCES.md`
-- directory-level data licence files under `molxai_crc/results/`
-
-Users are responsible for retrieving upstream inputs from the cited providers and following their current terms.
+Upstream licences and provider terms govern the upstream resources. The repository root MIT License covers only repository-authored code and documentation and does not grant redistribution permission for upstream materials.
