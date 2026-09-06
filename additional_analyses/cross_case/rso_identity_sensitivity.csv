@@ -1,0 +1,4 @@
+identity_definition,definition_detail,test_total_rows,test_valid_reactant_product_rows,overlap_total_rows,overlap_total_rate,overlap_valid_rows,overlap_valid_rate,overlap_unique_test_keys
+exact_tuple,sorted canonical reactants + sorted canonical reagents + sorted canonical products,40000,39995,782,0.01955,782,0.019552444055506938,777
+ignore_reagent,sorted canonical reactants + sorted canonical products,40000,39995,3599,0.089975,3599,0.08998624828103513,3453
+product_only,sorted canonical products,40000,39995,5442,0.13605,5442,0.13606700837604702,5033

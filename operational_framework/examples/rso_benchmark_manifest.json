@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "reactiont5-uspto-mit-rso",
+  "version": "ReactionT5v2 commit 76eb08068e10fe255cae5d563a91e1c1e9abac54",
+  "source": {
+    "name": "USPTO_MIT split distributed through ReactionT5v2",
+    "locator": "https://github.com/sagawatatsuya/ReactionT5v2",
+    "access_note": "The upstream archive is referenced by locator and digest; data are not redistributed here.",
+    "license_note": "ReactionT5v2 code is MIT; the referenced USPTO_MIT archive contains no licence file, so this fixture does not assert a data redistribution licence."
+  },
+  "assets": [
+    {
+      "asset_id": "uspto_mit_zip",
+      "role": "primary_data",
+      "locator": "Google Drive file id 1NEb5DSwqFfg4gm0P2lPb19cqPt96-OSC",
+      "sha256": "3FB96BEF12B0E87EF0F0EA243723A861B1FDE161F6CD9DC45FE879EB98891C70",
+      "redistribution": "reference_only"
+    },
+    {
+      "asset_id": "reactiont5v2_code",
+      "role": "code",
+      "locator": "https://github.com/sagawatatsuya/ReactionT5v2",
+      "revision": "76eb08068e10fe255cae5d563a91e1c1e9abac54",
+      "redistribution": "reference_only"
+    }
+  ],
+  "splits": [
+    {
+      "name": "train",
+      "role": "reference",
+      "rows_total": 409035,
+      "rows_valid": 409006
+    },
+    {
+      "name": "validation",
+      "role": "reference",
+      "rows_total": 30000,
+      "rows_valid": 29998
+    },
+    {
+      "name": "test",
+      "role": "evaluation",
+      "rows_total": 40000,
+      "rows_valid": 39995
+    }
+  ],
+  "identity_rule": {
+    "name": "exact normalized reactant-reagent-product tuple",
+    "implementation": "RDKit parsing, stereochemistry-preserving canonicalization, and within-field component sorting",
+    "preserved_fields": [
+      "reactants",
+      "reagents",
+      "products",
+      "stereochemistry",
+      "disconnected components"
+    ],
+    "excluded_fields": []
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "verified_surfaces": 6,
+  "maximum_absolute_smd": 0.19908088182285155,
+  "mmp_series_cliff_ratios": {
+    "CHEMBL214_Ki": 1.0830819866865073,
+    "CHEMBL235_EC50": 1.1456465500709592,
+    "CHEMBL236_Ki": 1.1403189757735712
+  },
+  "ecfp_stressor_positive_datasets": 0
+}

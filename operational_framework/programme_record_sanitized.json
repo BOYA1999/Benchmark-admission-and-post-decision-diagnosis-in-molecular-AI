@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "record_date_reported": "2026-08-09",
+  "record_type": "sanitized retrospective programme inventory",
+  "article_eligibility_rule": {
+    "required_archive_components": [
+      "executable_go_stop_analysis",
+      "decision_record",
+      "separately_checked_decisive_output"
+    ],
+    "sampling_type": "purposive archive-completeness case series",
+    "population_inference": "none"
+  },
+  "directions": [
+    {
+      "programme_id": "excluded_direction_1",
+      "direction": "planning-only direction",
+      "state_at_article_audit": "planning_only",
+      "data_present": false,
+      "code_present": false,
+      "experimental_results_present": false,
+      "eligible_for_phase_i_case_series": false,
+      "reason": "No executable branch archive or scientific result was available."
+    },
+    {
+      "programme_id": "ACE",
+      "direction": "molecular foundation-model uncertainty under activity-cliff stress",
+      "article_case": "ACE",
+      "state_at_article_audit": "completed_branch_archive",
+      "data_present": true,
+      "code_present": true,
+      "experimental_results_present": true,
+      "eligible_for_phase_i_case_series": true,
+      "reason": "The archive contained an executable analysis, decision record and separately reproduced decisive metric."
+    },
+    {
+      "programme_id": "MXC",
+      "direction": "molecular-XAI construct sensitivity",
+      "article_case": "MXC",
+      "state_at_article_audit": "completed_branch_archive",
+      "data_present": true,
+      "code_present": true,
+      "experimental_results_present": true,
+      "eligible_for_phase_i_case_series": true,
+      "reason": "The archive contained an executable analysis, decision record and separately checked aggregate outputs."
+    },
+    {
+      "programme_id": "RSO",
+      "direction": "reaction-model uncertainty and source exposure",
+      "article_case": "RSO",
+      "state_at_article_audit": "completed_branch_archive",
+      "data_present": true,
+      "code_present": true,
+      "experimental_results_present": true,
+      "eligible_for_phase_i_case_series": true,
+      "reason": "The archive contained an executable source-overlap analysis, decision record and separately rebuilt overlap counts."
+    }
+  ],
+  "selected_phase_i_cases": [
+    "RSO",
+    "ACE",
+    "MXC"
+  ],
+  "excluded_direction": "excluded_direction_1",
+  "exclusion_is_not_a_negative_result": true
+}

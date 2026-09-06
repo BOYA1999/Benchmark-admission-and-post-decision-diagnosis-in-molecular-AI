@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "rso-exact-source-gate-v1",
+  "benchmark_id": "reactiont5-uspto-mit-rso",
+  "analysis_role": "benchmark_admission",
+  "audit_layer": "source",
+  "benchmark_manifest_ref": {
+    "path": "rso_benchmark_manifest.json",
+    "sha256": "3A0D9AE13918B781C27481F42745118F88E97DC2FDD0D59996BC55FB84FE31F4"
+  },
+  "claim": {
+    "claim_id": "rso-exact-source-separation",
+    "text": "Proceed to model comparison only if no distributed test row has an exact normalized identity in train or validation.",
+    "planned_scope": "Exact normalized, reagent-preserving reactant-reagent-product tuple membership in the distributed USPTO_MIT split; the distributed strings contained no atom-map tokens."
+  },
+  "estimand": {
+    "population": "All 40000 distributed USPTO_MIT test rows compared with train and validation",
+    "quantity": "Number of test rows whose exact normalized tuple is present in train or validation",
+    "unit": "distributed test row",
+    "aggregation": "union count over 40000 rows; 39995 parser-valid reactant/product rows are reported separately"
+  },
+  "gate": {
+    "metric": "test_overlap_reference_union",
+    "operator": "==",
+    "threshold": 0,
+    "fail_decision": "STOP"
+  },
+  "initial_state": "AUDIT_PENDING",
+  "decision_summary": {
+    "STOP": "Stop this planned branch before model comparison: the specified exact normalized tuple source gate failed",
+    "REVISE": "No admission decision until the exact normalized tuple audit is complete for all distributed test rows."
+  },
+  "component_baseline": {
+    "population": "All 40000 distributed test rows against train plus validation",
+    "estimand": "Union count of exact overlapping test rows",
+    "implementation": "RDKit parsing, stereochemistry-preserving canonicalization and within-field component sorting; reagents retained",
+    "contract": "test_overlap_reference_union == 0",
+    "test": "Independent tuple rebuild and train/validation/union membership counts"
+  }
+}

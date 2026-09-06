@@ -1,0 +1,23 @@
+{
+  "rows": {
+    "train": 409035,
+    "val": 30000,
+    "test": 40000
+  },
+  "valid_reactant_product": {
+    "train": 409006,
+    "val": 29998,
+    "test": 39995
+  },
+  "normalized_duplicates": {
+    "train": 3721,
+    "val": 23,
+    "test": 42
+  },
+  "test_overlap_train_val": 782,
+  "template_failed": {
+    "train_mapped": 29,
+    "test_aligned": 911
+  },
+  "test_included": 39176
+}

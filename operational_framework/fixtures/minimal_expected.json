@@ -1,0 +1,18 @@
+{
+  "decision": "GO",
+  "to_state": "ADMITTED",
+  "decision_summary": "The zero-overlap gate is satisfied for the four displayed labels only.",
+  "components": {
+    "retained": [
+      "population",
+      "estimand",
+      "contract"
+    ],
+    "revised": [
+      "implementation"
+    ],
+    "replaced": [
+      "test"
+    ]
+  }
+}

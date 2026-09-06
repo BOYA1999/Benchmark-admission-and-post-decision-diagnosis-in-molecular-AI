@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "hand-check-four-labels",
+  "version": "1",
+  "source": {
+    "name": "Synthetic four-label fixture",
+    "locator": "inline:reference=[A,B];evaluation=[C,D]",
+    "access_note": "All four synthetic labels are shown in this manifest.",
+    "license_note": "Synthetic software-checking fixture"
+  },
+  "assets": [
+    {
+      "asset_id": "inline_labels",
+      "role": "metadata",
+      "locator": "inline:reference=[A,B];evaluation=[C,D]",
+      "redistribution": "included"
+    }
+  ],
+  "splits": [
+    {
+      "name": "reference",
+      "role": "reference",
+      "rows_total": 2,
+      "rows_valid": 2
+    },
+    {
+      "name": "evaluation",
+      "role": "evaluation",
+      "rows_total": 2,
+      "rows_valid": 2
+    }
+  ],
+  "identity_rule": {
+    "name": "exact label identity",
+    "implementation": "case-sensitive string equality",
+    "preserved_fields": [
+      "label"
+    ],
+    "excluded_fields": []
+  }
+}

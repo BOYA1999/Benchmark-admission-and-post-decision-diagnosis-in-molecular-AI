@@ -1,0 +1,24 @@
+{
+  "baseline_gate": true,
+  "baseline_passed_cells": 15,
+  "data_gate": true,
+  "negative_control_gate": true,
+  "primary_min_kendall_tau": 0.8666666666666666,
+  "primary_rank_signal": false,
+  "primary_definition_method_variance_ratio": 0.1275832764907602,
+  "primary_variance_signal": false,
+  "mse_normalization_flip_rate": 0.1488958152494571,
+  "primary_flip_signal": false,
+  "normalization_rows": 188760,
+  "flip_rows": 6292,
+  "all_key_metrics_finite": true,
+  "construct_gate": false,
+  "recomputed_decision": "STOP",
+  "matches_run_decision": true,
+  "archive_md5": {
+    "data": "cab828a6c6570044e7d9fb9914d38098",
+    "colors": "1437041174049a9b7f14e47f758847e9",
+    "results": "b83ec75c28c5eb87a1b19ca20bb12507"
+  },
+  "analysis_sha256": "18de87c8974491b4e6b0d2cf7e689c147252ae68e09f3c52aeb437856ba1668e"
+}

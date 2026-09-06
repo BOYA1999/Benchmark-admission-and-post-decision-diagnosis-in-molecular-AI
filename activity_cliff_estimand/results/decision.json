@@ -1,0 +1,30 @@
+{
+  "verdict": "bad",
+  "action": "stop",
+  "reason": "The MMP-series matched cliff/non-cliff RMSE ratio was below 1.25 for all three frozen datasets, so the stressor gate required in at least two datasets is impossible to satisfy.",
+  "target_run_id": "pilot_acuq_20260809",
+  "evidence_paths": [
+    "data/dataset_selection.json",
+    "data/split_qc.csv",
+    "artifacts/experiment/pilot_acuq_20260809/ecfp/metrics.csv",
+    "baselines/ecfp4_rf_pilot_v1/verification.json",
+    "artifacts/experiment/pilot_acuq_20260809/ecfp/matching_balance.csv"
+  ],
+  "reflection": {
+    "what_worked": "The data gate, strict split construction, three-seed baseline, frozen embedding extraction, and independent metric verification completed successfully.",
+    "what_failed": "The intended activity-cliff error amplification did not reach the registered 1.25 ratio in any primary stress split."
+  },
+  "next_direction": {
+    "objective": "Preserve the negative screen and stop this paper route.",
+    "key_steps": [
+      "Do not launch the remaining model matrix",
+      "Retain artifacts for audit"
+    ],
+    "success_criteria": [
+      "STOP record and evidence remain reproducible"
+    ],
+    "abandonment_criteria": [
+      "A verified implementation or data-contract error invalidates the decisive ratios"
+    ]
+  }
+}

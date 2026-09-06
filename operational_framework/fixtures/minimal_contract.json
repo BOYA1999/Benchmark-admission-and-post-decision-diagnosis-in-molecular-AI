@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "fixture-zero-overlap-v1",
+  "benchmark_id": "hand-check-four-labels",
+  "analysis_role": "scientific_reentry",
+  "audit_layer": "reentry",
+  "benchmark_manifest_ref": {
+    "path": "minimal_benchmark_manifest.json",
+    "sha256": "65C157C7A25D97E8D619543897B5F8072A1C401EA64624FE6BC547A99D07C2C7"
+  },
+  "claim": {
+    "claim_id": "fixture-exact-separation",
+    "text": "After an implementation repair, the evaluation labels are exactly separated from the reference labels.",
+    "planned_scope": "Exact case-sensitive label identity in this four-label fixture ."
+  },
+  "estimand": {
+    "population": "Evaluation labels C and D",
+    "quantity": "Number of evaluation labels also present in reference labels A and B",
+    "unit": "evaluation label",
+    "aggregation": "count"
+  },
+  "gate": {
+    "metric": "overlap_count",
+    "operator": "==",
+    "threshold": 0,
+    "fail_decision": "STOP"
+  },
+  "initial_state": "STOPPED",
+  "decision_summary": {
+    "GO": "The zero-overlap gate is satisfied for the four displayed labels only.",
+    "STOP": "Stop before downstream comparison because the displayed splits share at least one exact label.",
+    "REVISE": "No decision until the overlap observation is complete."
+  },
+  "component_baseline": {
+    "population": "Evaluation labels C and D",
+    "estimand": "Exact-overlap count",
+    "implementation": "Previously recorded case-sensitive set-intersection implementation",
+    "contract": "overlap_count == 0",
+    "test": "Previously recorded decision test"
+  }
+}

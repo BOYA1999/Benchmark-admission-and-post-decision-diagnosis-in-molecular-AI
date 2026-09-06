@@ -1,0 +1,60 @@
+{
+  "run_id": "pilot_acuq_20260809",
+  "moleculeace_commit": "7e6de0bd2968c56589c580f2a397f01c531ede26",
+  "dataset_selection_quantiles": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "minimum_unique_molecules": 1000,
+  "minimum_valid_fraction": 0.98,
+  "minimum_test_cliff_pairs": 30,
+  "cliff": {
+    "similarity": 0.9,
+    "potency_fold_strictly_greater_than": 10.0,
+    "morgan_radius": 2,
+    "morgan_bits": 1024,
+    "similarity_union": [
+      "morgan_tanimoto",
+      "generic_scaffold_tanimoto",
+      "canonical_smiles_levenshtein"
+    ]
+  },
+  "prediction_ecfp": {
+    "radius": 2,
+    "bits": 2048
+  },
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "rf": {
+    "n_estimators": 500,
+    "min_samples_leaf": 1,
+    "n_jobs": -1
+  },
+  "splits": {
+    "original_calibration_fraction_of_official_train": 0.2,
+    "mmp_group_fractions": {
+      "train": 0.6,
+      "calibration": 0.2,
+      "test": 0.2
+    },
+    "group_seed": 20260809
+  },
+  "conformal_alpha": 0.1,
+  "negative_controls": {
+    "label_permutation_seed": 17,
+    "random_uq_seed": 20260809
+  },
+  "molformer": {
+    "model": "ibm-research/MoLFormer-XL-both-10pct",
+    "revision": "361063d0ad524ef77cf39b08469f6be770dc550f",
+    "trust_remote_code": true,
+    "frozen": true,
+    "pooling": "masked_mean",
+    "batch_size": 64,
+    "max_length": 202
+  }
+}

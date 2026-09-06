@@ -1,0 +1,4 @@
+gate_input,criterion_for_signal,archived_value,raw_recomputed_value,absolute_difference,raw_signal,raw_denominator_or_scope,cause_status
+minimum_Kendall_tau_MCS50_vs_55_95,<0.80,0.8666666666666666,0.9999999999999999,0.1333333333333333,False,9 threshold comparisons; pairwise-complete targets reported in mxc_raw_rank_stability.csv,difference_recorded
+definition_to_method_marginal_variance_ratio,>=1.0,0.1275832764907602,0.11493494884828723,0.012648327642472978,False,232 complete targets x 6 methods x 10 thresholds,difference_recorded
+pooled_MSE_normalization_verdict_flip_rate,>=0.20,0.1488958152494571,0.1488958152494571,0.0,False,96402 flipped / 647446 eligible pair-method rows,established_exact_reproduction

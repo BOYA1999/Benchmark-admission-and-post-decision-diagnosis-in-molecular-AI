@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/molai/audit_contract.schema.json",
+  "title": "Molecular-AI audit contract",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "contract_id",
+    "benchmark_id",
+    "analysis_role",
+    "audit_layer",
+    "benchmark_manifest_ref",
+    "claim",
+    "estimand",
+    "gate",
+    "initial_state",
+    "decision_summary",
+    "component_baseline"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "contract_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "benchmark_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "analysis_role": {
+      "enum": [
+        "benchmark_admission",
+        "post_stop_diagnostic",
+        "scientific_reentry"
+      ]
+    },
+    "audit_layer": {
+      "enum": [
+        "source",
+        "estimand",
+        "stressor",
+        "construct",
+        "model",
+        "reentry"
+      ]
+    },
+    "benchmark_manifest_ref": {
+      "type": "object",
+      "required": [
+        "path"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "claim": {
+      "type": "object",
+      "required": [
+        "claim_id",
+        "text",
+        "planned_scope"
+      ],
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "planned_scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "estimand": {
+      "type": "object",
+      "required": [
+        "population",
+        "quantity",
+        "unit",
+        "aggregation"
+      ],
+      "properties": {
+        "population": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quantity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aggregation": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "gate": {
+      "type": "object",
+      "required": [
+        "metric",
+        "operator",
+        "threshold",
+        "fail_decision"
+      ],
+      "properties": {
+        "metric": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operator": {
+          "enum": [
+            "==",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">="
+          ]
+        },
+        "threshold": {
+          "type": "number"
+        },
+        "fail_decision": {
+          "enum": [
+            "STOP",
+            "REVISE"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "initial_state": {
+      "enum": [
+        "AUDIT_PENDING",
+        "ADMITTED",
+        "STOPPED",
+        "REVISION_REQUIRED"
+      ]
+    },
+    "decision_summary": {
+      "type": "object",
+      "required": [
+        "GO",
+        "STOP",
+        "REVISE"
+      ],
+      "properties": {
+        "GO": {
+          "type": "string",
+          "minLength": 1
+        },
+        "STOP": {
+          "type": "string",
+          "minLength": 1
+        },
+        "REVISE": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "component_baseline": {
+      "$ref": "#/$defs/components"
+    }
+  },
+  "$defs": {
+    "components": {
+      "type": "object",
+      "required": [
+        "population",
+        "estimand",
+        "implementation",
+        "contract",
+        "test"
+      ],
+      "properties": {
+        "population": {
+          "type": "string",
+          "minLength": 1
+        },
+        "estimand": {
+          "type": "string",
+          "minLength": 1
+        },
+        "implementation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contract": {
+          "type": "string",
+          "minLength": 1
+        },
+        "test": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

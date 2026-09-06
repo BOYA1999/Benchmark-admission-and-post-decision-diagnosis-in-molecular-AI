@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "transition_id": "rso-exact-source-gate-v1:rso-day1-go-stop-20260809",
+  "contract_id": "rso-exact-source-gate-v1",
+  "observation_id": "rso-day1-go-stop-20260809",
+  "recorded_at": "2026-08-09T17:12:15+08:00",
+  "analysis_role": "benchmark_admission",
+  "audit_layer": "source",
+  "claim_id": "rso-exact-source-separation",
+  "from_state": "AUDIT_PENDING",
+  "to_state": "STOPPED",
+  "decision": "STOP",
+  "gate_evaluation": {
+    "metric": "test_overlap_reference_union",
+    "observed": 782,
+    "operator": "==",
+    "threshold": 0,
+    "passed": false
+  },
+  "reason": "test_overlap_reference_union=782 does not satisfy == 0.",
+  "decision_summary": "Stop this planned branch before model comparison: the specified exact normalized tuple source gate failed",
+  "components": {
+    "retained": [
+      "population",
+      "estimand",
+      "implementation",
+      "contract",
+      "test"
+    ],
+    "revised": [],
+    "replaced": []
+  },
+  "input_sha256": {
+    "contract": "F94E3E8C39818232D1BE80971248A6CF7E53AB8EA99B592A437CB0176F791656",
+    "observation": "EC5F8CD02D971FA7A9316104AEBF8CC03482752C9CD06513AC24CF73445EBCC2"
+  }
+}

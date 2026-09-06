@@ -1,0 +1,36 @@
+{
+  "released_rows": 66470,
+  "released_targets": 350,
+  "released_explainers": [
+    "cam",
+    "diff",
+    "gradcam",
+    "gradinput",
+    "ig",
+    "rf",
+    "shap"
+  ],
+  "released_thresholds": [
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95
+  ],
+  "released_missing_fraction": {
+    "acc_test": 0.05316684218444411,
+    "f1_test": 0.05316684218444411,
+    "global_dir_test": 0.04945088009628404,
+    "local_dir_test": 0.053211975327215284
+  },
+  "n_test_targets": 350,
+  "n_test_pairs": 108962,
+  "n_test_pairs_mcs50": 108962,
+  "n_color_files_missing": 8,
+  "normalization_rows": 188760
+}

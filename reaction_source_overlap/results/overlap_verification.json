@@ -1,0 +1,9 @@
+{
+  "raw_train": 739,
+  "raw_val": 50,
+  "canonical_train": 739,
+  "canonical_val": 50,
+  "canonical_both": 7,
+  "canonical_union": 782,
+  "canonical_test_duplicates": 42
+}

@@ -1,0 +1,17 @@
+{
+  "run_id": "day1_go_stop_20260809",
+  "status": "stopped_at_source_gate",
+  "finished_at": "2026-08-09T17:12:15+08:00",
+  "seed": 20260809,
+  "official_code_commit": "76eb08068e10fe255cae5d563a91e1c1e9abac54",
+  "model_revision_planned_but_not_downloaded": "260cf4aa7e6f55b1a9db1e328f48701cd3fd7cfc",
+  "uspto_mit_zip_sha256": "3FB96BEF12B0E87EF0F0EA243723A861B1FDE161F6CD9DC45FE879EB98891C70",
+  "mapped_uspto_zip_sha256": "6D94A136E11F76FE464430CB95D1AE6DB37B6CA352161CA4EDDDD9E6FE76A88A",
+  "commands": [
+    ".venv_rt/Scripts/python.exe scripts/audit_data.py",
+    ".venv_rt/Scripts/python.exe scripts/verify_overlap.py"
+  ],
+  "primary_evidence": "artifacts/experiment/day1_go_stop/overlap_verification.json",
+  "verdict": "STOP",
+  "reason": "782 of 40000 test reactions exactly overlap train or validation, violating the frozen zero-overlap source gate"
+}

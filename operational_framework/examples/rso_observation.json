@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "observation_id": "rso-day1-go-stop-20260809",
+  "contract_id": "rso-exact-source-gate-v1",
+  "recorded_at": "2026-08-09T17:12:15+08:00",
+  "status": "complete",
+  "metric": "test_overlap_reference_union",
+  "value": 782,
+  "prior_state": "AUDIT_PENDING",
+  "component_status": {
+    "population": "retained",
+    "estimand": "retained",
+    "implementation": "retained",
+    "contract": "retained",
+    "test": "retained"
+  },
+  "note": "739 test rows matched train, 50 matched validation and 7 matched both; the union was 782 of 40000 distributed test rows."
+}

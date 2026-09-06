@@ -1,0 +1,34 @@
+{
+  "run_id": "pilot_acuq_20260809",
+  "stage": "baseline_then_go_stop_pilot",
+  "status": "stopped_by_registered_gate",
+  "start_time_local": "2026-08-09T16:58:09+08:00",
+  "end_time_local": "2026-08-09T17:27:00+08:00",
+  "config": "config/pilot.json",
+  "datasets": [
+    "CHEMBL235_EC50",
+    "CHEMBL236_Ki",
+    "CHEMBL214_Ki"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "completed_model_runs": 18,
+  "planned_model_runs_before_early_stop": 36,
+  "commands": [
+    ".venv/Scripts/python.exe src/prepare_data.py --config config/pilot.json --data-dir external_sources/MoleculeACE/MoleculeACE/Data/benchmark_data --output-dir data",
+    ".venv/Scripts/python.exe src/prepare_splits.py --config config/pilot.json --selection data/dataset_selection.json --processed-dir data/processed --output-dir data",
+    ".venv/Scripts/python.exe src/extract_molformer.py --config config/pilot.json --selection data/dataset_selection.json --processed-dir data/processed --output-dir features/molformer",
+    ".venv/Scripts/python.exe src/run_pilot.py --config config/pilot.json --split-manifest data/split_manifest.csv --representation ecfp --output-dir artifacts/experiment/pilot_acuq_20260809/ecfp",
+    ".venv/Scripts/python.exe src/validate_baseline.py --data-dir data --baseline-dir artifacts/experiment/pilot_acuq_20260809/ecfp --report baselines/ecfp4_rf_pilot_v1/verification.json"
+  ],
+  "environment": {
+    "lock": "environment.lock",
+    "summary": "artifacts/experiment/pilot_acuq_20260809/environment_summary.txt",
+    "gpu": "artifacts/experiment/pilot_acuq_20260809/nvidia_smi.txt",
+    "note": "pip freeze failed on an unrelated invalid editable path; pip list --format=freeze was used without altering the global environment."
+  },
+  "final_verdict": "STOP_EARLY_STRESSOR_GATE"
+}

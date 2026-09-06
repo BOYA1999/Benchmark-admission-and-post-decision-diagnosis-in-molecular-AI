@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "transition_id": "fixture-zero-overlap-v1:fixture-observation-1",
+  "contract_id": "fixture-zero-overlap-v1",
+  "observation_id": "fixture-observation-1",
+  "recorded_at": "2026-09-04T00:00:00+08:00",
+  "analysis_role": "scientific_reentry",
+  "audit_layer": "reentry",
+  "claim_id": "fixture-exact-separation",
+  "from_state": "STOPPED",
+  "to_state": "ADMITTED",
+  "decision": "GO",
+  "gate_evaluation": {
+    "metric": "overlap_count",
+    "observed": 0,
+    "operator": "==",
+    "threshold": 0,
+    "passed": true
+  },
+  "reason": "overlap_count=0 satisfies == 0.",
+  "decision_summary": "The zero-overlap gate is satisfied for the four displayed labels only.",
+  "components": {
+    "retained": [
+      "population",
+      "estimand",
+      "contract"
+    ],
+    "revised": [
+      "implementation"
+    ],
+    "replaced": [
+      "test"
+    ]
+  },
+  "input_sha256": {
+    "contract": "E2FB81F3436E5F954D64D1575414D024FE7924259A1AF9A4ED0F123A21CEA2DE",
+    "observation": "98554BB6672DF78921BD46B95B3C7E1A6A068BDF117B1AC2E631EE9557F2C7DC"
+  }
+}

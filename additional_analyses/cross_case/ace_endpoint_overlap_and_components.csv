@@ -1,0 +1,7 @@
+analysis_set,dataset,matched_rows,cliff_unique_molecules,noncliff_unique_molecules,shared_cliff_noncliff_molecules,shared_fraction_of_cliff_unique,shared_fraction_of_noncliff_unique,dependency_components,largest_component_rows,largest_component_fraction_rows,cliff_maximum_multiplicity,noncliff_maximum_multiplicity,inverse_unique_max_abs_difference
+archived_matches,CHEMBL214_Ki,133,145,160,81,0.5586206896551724,0.50625,13,95,0.7142857142857143,9,6,0.0
+fixed_endpoint_disjoint,CHEMBL214_Ki,32,55,61,0,0.0,0.0,20,4,0.125,3,2,1.1102230246251565e-16
+archived_matches,CHEMBL235_EC50,76,85,103,46,0.5411764705882353,0.44660194174757284,5,44,0.5789473684210527,5,4,2.220446049250313e-16
+fixed_endpoint_disjoint,CHEMBL235_EC50,27,47,44,0,0.0,0.0,13,6,0.2222222222222222,3,3,0.0
+archived_matches,CHEMBL236_Ki,144,134,173,78,0.582089552238806,0.4508670520231214,10,88,0.6111111111111112,8,5,0.0
+fixed_endpoint_disjoint,CHEMBL236_Ki,41,51,72,0,0.0,0.0,14,16,0.3902439024390244,5,4,1.1102230246251565e-16

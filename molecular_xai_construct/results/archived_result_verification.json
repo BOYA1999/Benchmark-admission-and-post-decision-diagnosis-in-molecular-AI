@@ -1,0 +1,18 @@
+{
+  "baseline_gate": true,
+  "baseline_passed_cells": 15,
+  "data_gate": true,
+  "negative_control_gate": true,
+  "primary_min_kendall_tau": 0.8666666666666666,
+  "primary_rank_signal": false,
+  "primary_definition_method_variance_ratio": 0.1275832764907602,
+  "primary_variance_signal": false,
+  "mse_normalization_flip_rate": 0.1488958152494571,
+  "primary_flip_signal": false,
+  "normalization_rows": 188760,
+  "flip_rows": 6292,
+  "construct_gate": false,
+  "recomputed_decision": "STOP",
+  "matches_run_decision": true,
+  "status": "PASS"
+}

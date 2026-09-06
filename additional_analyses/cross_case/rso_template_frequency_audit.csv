@@ -1,0 +1,3 @@
+custom_template_radius,test_total_rows,test_aligned_success_rows,test_aligned_failed_rows,rows_with_train_frequency_ge_1,rows_with_train_frequency_0,median_train_frequency_success_rows,maximum_train_frequency_success_rows,lookup_scope,definition_scope,train_mapped_parse_failures
+0,40000,39089,911,38284,805,1535.0,10999,training mapped records only,custom center-environment digest,29
+1,40000,39089,911,37188,1901,328.0,9911,training mapped records only,custom center-environment digest,29

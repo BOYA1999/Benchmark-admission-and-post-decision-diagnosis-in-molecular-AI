@@ -1,0 +1,16 @@
+{
+  "decision": "STOP",
+  "to_state": "STOPPED",
+  "decision_summary": "Stop this planned branch before model comparison: the specified exact normalized tuple source gate failed",
+  "components": {
+    "retained": [
+      "population",
+      "estimand",
+      "implementation",
+      "contract",
+      "test"
+    ],
+    "revised": [],
+    "replaced": []
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "analysis_status": "additional_sensitivity_analysis",
+  "seed": 20260904,
+  "bootstrap_replicates": 5000,
+  "rso": {
+    "exact_overlap_total": 782,
+    "test_total": 40000,
+    "exact_overlap_valid": 782,
+    "test_valid": 39995,
+    "csv_atom_map_rows": 0,
+    "test_template_alignment_failures": 911
+  },
+  "ace": {
+    "unique_ratios": {
+      "CHEMBL214_Ki": 1.0830819866865073,
+      "CHEMBL235_EC50": 1.1456465500709594,
+      "CHEMBL236_Ki": 1.1403189757735712
+    },
+    "pair_equal_ratios": {
+      "CHEMBL214_Ki": 1.2538342195031138,
+      "CHEMBL235_EC50": 1.2914205420505531,
+      "CHEMBL236_Ki": 1.2912956278466368
+    },
+    "inverse_multiplicity_equals_unique_to_atol": 1e-12
+  },
+  "mxc": {
+    "mcs_50_95_complete_targets": 233,
+    "complete_case_variance_ratio": 0.12758327649076023,
+    "available_cell_variance_ratio": 0.1344919564236403,
+    "minimum_tau": 0.8666666666666666,
+    "pooled_flip_rate": 0.1488958152494571,
+    "pooled_flip_target_cluster_ci": [
+      0.14243370478125866,
+      0.15561154283723852
+    ],
+    "recorded_triggers_crossed": false
+  }
+}

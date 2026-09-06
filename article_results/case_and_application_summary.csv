@@ -1,0 +1,38 @@
+case,case_name,layer,metric,unit_or_denominator,recorded_trigger,observed_value,decision
+RSO,Reaction-Source Overlap,source,exact test overlap,test rows,0,782/40000,STOP
+RSO,Reaction-Source Overlap,source,unique overlapping keys,normalized reaction keys,identity audit,777,reported
+RSO,Reaction-Source Overlap,source,exact test overlap among parser-valid rows,parser-valid test rows,additional denominator audit,782/39995,reported
+RSO,Reaction-Source Overlap,source,overlap after ignoring reagent field,all test rows,additional identity sensitivity,3599/40000,reported
+RSO,Reaction-Source Overlap,source,product-only overlap,all test rows,additional identity sensitivity,5442/40000,reported
+ACE,Activity-Cliff Estimand,estimand,strict ECFP ratio CHEMBL214 endpoint-deduplicated,unique molecular endpoints,>=1.25 ECFP component within joint ECFP-MoLFormer gate,1.083082,NEGATIVE_ECFP_COMPONENT
+ACE,Activity-Cliff Estimand,estimand,strict ECFP ratio CHEMBL214 pair-equal,matched pair rows,>=1.25 ECFP component within joint ECFP-MoLFormer gate,1.253834,POSITIVE_ECFP_COMPONENT
+ACE,Activity-Cliff Estimand,estimand,strict ECFP ratio CHEMBL235 endpoint-deduplicated,unique molecular endpoints,>=1.25 ECFP component within joint ECFP-MoLFormer gate,1.145647,NEGATIVE_ECFP_COMPONENT
+ACE,Activity-Cliff Estimand,estimand,strict ECFP ratio CHEMBL235 pair-equal,matched pair rows,>=1.25 ECFP component within joint ECFP-MoLFormer gate,1.291421,POSITIVE_ECFP_COMPONENT
+ACE,Activity-Cliff Estimand,estimand,strict ECFP ratio CHEMBL236 endpoint-deduplicated,unique molecular endpoints,>=1.25 ECFP component within joint ECFP-MoLFormer gate,1.140319,NEGATIVE_ECFP_COMPONENT
+ACE,Activity-Cliff Estimand,estimand,strict ECFP ratio CHEMBL236 pair-equal,matched pair rows,>=1.25 ECFP component within joint ECFP-MoLFormer gate,1.291296,POSITIVE_ECFP_COMPONENT
+ACE,Activity-Cliff Estimand,dependence,shared cliff/non-cliff molecules,CHEMBL214; CHEMBL235; CHEMBL236,additional diagnostic,81; 46; 78,reported
+ACE,Activity-Cliff Estimand,dependence,dependency components,CHEMBL214; CHEMBL235; CHEMBL236,additional diagnostic,13; 5; 10,reported
+ACE,Activity-Cliff Estimand,estimand,endpoint-disjoint filtered ratio,32/133; 27/76; 41/144 rows retained,additional diagnostic,1.318; 1.370; 1.882,reported
+MXC,Molecular-XAI Construct,construct,minimum primary Kendall tau,six-method rank,<0.80,0.866667,NOT_CROSSED
+MXC,Molecular-XAI Construct,construct,definition/method variance ratio,233 complete targets,>=1.00,0.127583,NOT_CROSSED
+MXC,Molecular-XAI Construct,construct,combined normalization flip rate,647446 pair appearances,>=20%,14.8896%,NOT_CROSSED
+MXC,Molecular-XAI Construct,control,real-minus-random attribution,six explainers,absolute mean >=0.02 and bootstrap CI excludes 0,0.02919-0.12230,PASS
+MXC,Molecular-XAI Construct,construct,available-cell definition/method variance ratio,all observed method-threshold cells,additional missingness sensitivity,0.134492,reported
+MXC,Molecular-XAI Construct,construct,method-specific normalization flip rates,six explainers,additional heterogeneity diagnostic,7.85%-26.10%,reported
+MXC,Molecular-XAI Construct,reconciliation,archived versus recomputed primary MSE accuracy,19854 finite comparable target-explainer-MCS-threshold cells,additional absolute difference audit at local 0.02 tolerance,1662 within 1e-12; 4925 within 0.02; 14929 above 0.02; median absolute difference 0.057081,reported
+CRC,MolXAI-CRC,sampling,calibration and test sample-size ranges,66 matched task-backbone-seed cells,additional audit,66-100 calibration; 47-100 test,reported
+CRC,MolXAI-CRC,dependence,cross-task exact-SMILES overlap,55 task pairs,additional audit,22 pairs overlap; maximum Jaccard 0.3378,reported
+CRC,MolXAI-CRC,null-mask,selected fraction on null reference masks,51508 molecule-model rows,additional diagnostic,macro 0.5998; pooled 0.4822,reported
+CRC,MolXAI-CRC,classification,correctly classified subset,25266 of 27224 reference-mask-positive rows,additional diagnostic,risk 0.08835; retained fraction 0.59765; 16/22 empirical risk passes,reported
+CRC,MolXAI-CRC,feasibility,finite-sample arithmetic,264 cell-alpha checks,alpha .05 requires n>=19; alpha .10 requires n>=9,264/264 feasible,reported
+CRC,MolXAI-CRC,risk-size,tie-inclusive atom occlusion,11 task-macro means,alpha .10; retained fraction below .80,risk .07555; retained .50188; precision .61409; IoU .57996; risk/size/joint passes 55/51/40,reported
+CRC,MolXAI-CRC,risk-size,tie-inclusive GNNExplainer,11 task-macro means,alpha .10; retained fraction below .80,risk .08470; retained .85092; precision .29319; IoU .28244; risk/size/joint passes 54/11/6,reported
+CRC,MolXAI-CRC,risk-size,tie-inclusive GradInput,11 task-macro means,alpha .10; retained fraction below .80,risk .07352; retained .65633; precision .53143; IoU .50672; risk/size/joint passes 58/24/23,reported
+CRC,MolXAI-CRC,risk-size,tie-inclusive Integrated Gradients,11 task-macro means,alpha .10; retained fraction below .80,risk .07347; retained .60308; precision .55360; IoU .52733; risk/size/joint passes 60/38/32,reported
+CRC,MolXAI-CRC,risk-size,tie-inclusive saliency,11 task-macro means,alpha .10; retained fraction below .80,risk .07793; retained .61244; precision .45454; IoU .43497; risk/size/joint passes 56/39/30,reported
+CRC,MolXAI-CRC,tie-rule,boundary-tie frequency,five rankings and both splits,additional implementation audit,2.54%-11.37%,reported
+CRC,MolXAI-CRC,permutation,selector-level atom reordering,63390 molecule-method-split rows,reported fraction plus five fixed fractions,378540 selector evaluations; 0 mapped-set mismatches,PASS
+CRC,MolXAI-CRC,comparison,atom occlusion minus Integrated Gradients retained fraction,11 observed task means,equal-task mean,difference -0.10120,reported
+CRC,MolXAI-CRC,comparison,GradInput minus Integrated Gradients IoU,11 observed task means,equal-task mean,difference -0.02061,reported
+CRC,MolXAI-CRC,implementation,atom-occlusion reference sensitivity,66 matched cells,additional fixed-interface sensitivity,zero risk/size 0.07555/0.50188; fit-mean 0.07511/0.58511,reported
+CRC,MolXAI-CRC,implementation,GNNExplainer explainer-seed sensitivity,22 task-backbone cells at predictor seed42,additional fixed-predictor sensitivity,seed42/123/2026 risk 0.08933/0.07873/0.08729; retained 0.85036/0.86201/0.85014; 0 failures,reported

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "observation_id": "fixture-observation-1",
+  "contract_id": "fixture-zero-overlap-v1",
+  "recorded_at": "2026-09-04T00:00:00+08:00",
+  "status": "complete",
+  "metric": "overlap_count",
+  "value": 0,
+  "prior_state": "STOPPED",
+  "component_status": {
+    "population": "retained",
+    "estimand": "retained",
+    "implementation": "revised",
+    "contract": "retained",
+    "test": "replaced"
+  },
+  "note": "Population, estimand and gate were retained; the implementation was repaired and a new decision test found the displayed intersection of [A,B] and [C,D] to be empty."
+}

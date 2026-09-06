@@ -1,0 +1,22 @@
+{
+  "run_id": "jc3_construct_validity_pilot_20260809",
+  "preliminary_decision": "STOP",
+  "final_decision": "STOP",
+  "independently_verified": true,
+  "gates": {
+    "baseline_reproduction": true,
+    "data_completeness": true,
+    "negative_control": true,
+    "construct_sensitivity": false,
+    "non_redundancy": null
+  },
+  "construct_signals": {
+    "primary_rank_tau_below_0_80": false,
+    "primary_definition_method_variance_ratio_ge_1": false,
+    "mse_normalization_flip_rate": 0.1488958152494571,
+    "mse_normalization_flip_rate_ge_0_20": false
+  },
+  "baseline_status": "verified",
+  "verification_file": "results/verification.json",
+  "non_redundancy_status": "not_evaluated_after_construct_gate_failure"
+}
